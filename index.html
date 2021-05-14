@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>My Family Book</title>
+    </head>
+    <body>
+        <h1>My Family Book</h1>
+        <hr> <hr>
+        <img id="my_family_img" src="family.jpg">
+        <h3 id="one">1.Our Family Book</h3>
+        <button type="button" onclick="family()">Next</button>
+        <hr>
+        <script>
+            var names=[
+             "2.My Father (Deepak Pawar)",
+             "3.My Mother (Vaijayanti Pawar)",
+             "4.My Brother (Dishant Pawar)",
+             "5.Me (Piyush Pawar)"
+            ];
+            var images=[
+                "Baba.jpg",
+                "Aai.jpg",
+                "Bro.jpg",
+                "Me.jpg"
+            ];
+            var i=0
+            function family(){
+                document.getElementById("one").innerHTML=names[i];
+                document.getElementById("my_family_img").src=images[i];
+                i++;
+                if(i==4){
+                    i=0;
+                }
+            }
+        </script>
+    </body>
+</html>
